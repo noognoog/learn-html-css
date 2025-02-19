@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 버튼 요소</title>
+  </head>
+  <body>
+    <form action="/" method="post" id="buttonForm">
+      <div>
+        <label for="user">사용자 이름</label
+        ><input type="text" name="user" id="user" />
+      </div>
+      <div>
+        <label for="user">사용자 암호</label
+        ><input type="password" name="pwd" id="pwd" />
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="Clike Me!" />
+      </div>
+      <div>
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button">클릭!</button>
+      </div>
+      <div>
+        <button type="submit">
+          <img src="/src/assets/icon/search.svg" />
+        </button>
+      </div>
+    </form>
+    <button type="reset" form="buttonForm">초기화</button>
+  </body>
+</html>

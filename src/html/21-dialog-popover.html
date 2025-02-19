@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog 요소, popover 요소</title>
+    <style>
+      dialog.panel-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>dialog 요소</h1>
+    <div class="dialog-area">
+      <button type="button" class="show-dialog">모달창 보기</button>
+      <dialog
+        class="panel-dialog"
+        aria-label="깜짝 혜택"
+        aria-labelledby="event"
+      >
+        <h2 id="event">깜짝 혜택</h2>
+        <p>모달창 내용</p>
+        <button type="button" class="close-dialog">닫기</button>
+      </dialog>
+    </div>
+
+    <h1>pop over</h1>
+    <button type="button" popovertarget="popoverContent" class="button-popover">
+      팝오버 보기
+    </button>
+    <div popover id="popoverContent">
+      <p>팝오버 내용</p>
+    </div>
+
+    <script>
+      document
+        .querySelector('.show-dialog')
+        .addEventListener('click', function () {
+          document.querySelector('.panel-dialog').showModal();
+        });
+
+      document
+        .querySelector('.close-dialog')
+        .addEventListener('click', function () {
+          document.querySelector('.panel-dialog').close();
+        });
+    </script>
+  </body>
+</html>
